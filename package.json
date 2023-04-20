@@ -2,6 +2,11 @@
   "name": "@wired-protocol/types",
   "version": "0.0.1",
   "description": "Typescript types and zod schemas for The Wired.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wired-protocol/types.git"
+  },
+  "license": "MIT",
   "type": "module",
   "main": "./src/index.ts",
   "scripts": {
@@ -9,7 +14,6 @@
     "test": "jest",
     "test:watch": "jest --watch"
   },
-  "license": "MIT",
   "devDependencies": {
     "@types/jest": "^29.5.1",
     "jest": "^29.5.0",
