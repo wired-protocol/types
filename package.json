@@ -1,6 +1,6 @@
 {
   "name": "@wired-protocol/types",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Typescript types and zod schemas for The Wired.",
   "repository": {
     "type": "git",
@@ -8,8 +8,8 @@
   },
   "license": "MIT",
   "type": "module",
-  "main": "./dist/src/index.js",
-  "types": "./dist/src/index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "release": "pnpm run build && pnpm publish"
