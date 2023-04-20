@@ -5,7 +5,7 @@ export const WorldInfoSchema = z.object({
   description: z.string().optional(),
   image: z.string().url().optional(),
   host: z.string().min(1).optional(),
-  extras: z.record(z.any()).optional().optional(),
+  extras: z.record(z.any()).optional(),
 });
 
 export type WorldInfo = z.infer<typeof WorldInfoSchema>;

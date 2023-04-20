@@ -1,10 +1,11 @@
 {
   "name": "@wired-protocol/types",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Typescript types and zod schemas for The Wired.",
   "type": "module",
   "main": "./src/index.ts",
   "scripts": {
+    "build": "tsc",
     "test": "jest",
     "test:watch": "jest --watch"
   },
