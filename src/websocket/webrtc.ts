@@ -45,7 +45,7 @@ export const WebRTCRtpCapabilitiesSchema = z.object({
         parameters: z.record(z.any()).optional(),
       })
     )
-    .min(1),
+    .optional(),
   headerExtensions: z
     .array(
       z.object({
@@ -58,23 +58,21 @@ export const WebRTCRtpCapabilitiesSchema = z.object({
           .optional(),
       })
     )
-    .min(1),
+    .optional(),
 });
 
 export type WebRTCRtpCapabilities = z.infer<typeof WebRTCRtpCapabilitiesSchema>;
 
 export const WebRTCRtpParametersSchema = z.object({
-  codecs: z
-    .array(
-      z.object({
-        mimeType: z.string(),
-        payloadType: z.number().int().min(0).max(127),
-        clockRate: z.number().int().min(8000).max(96000),
-        channels: z.number().int().min(1).max(2).optional(),
-        parameters: z.record(z.any()).optional(),
-      })
-    )
-    .min(1),
+  codecs: z.array(
+    z.object({
+      mimeType: z.string(),
+      payloadType: z.number().int().min(0).max(127),
+      clockRate: z.number().int().min(8000).max(96000),
+      channels: z.number().int().min(1).max(2).optional(),
+      parameters: z.record(z.any()).optional(),
+    })
+  ),
   headerExtensions: z
     .array(
       z.object({
@@ -82,7 +80,7 @@ export const WebRTCRtpParametersSchema = z.object({
         id: z.number().int().min(1).max(255),
       })
     )
-    .min(1),
+    .optional(),
 });
 
 export type WebRTCRtpParameters = z.infer<typeof WebRTCRtpParametersSchema>;
