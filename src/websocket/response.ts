@@ -24,6 +24,13 @@ export const ResponseMessageSchema = z.union([
     }),
   }),
   z.object({
+    type: z.literal("player_address"),
+    data: z.object({
+      playerId: PlayerIdSchema,
+      address: z.string().nullable(),
+    }),
+  }),
+  z.object({
     type: z.literal("player_avatar"),
     data: z.object({
       playerId: PlayerIdSchema,

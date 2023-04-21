@@ -20,6 +20,10 @@ export const RequestMessageSchema = z.union([
     data: z.string().describe("The message to send"),
   }),
   z.object({
+    type: z.literal("set_address"),
+    data: z.string().nullable().describe("The address of the user"),
+  }),
+  z.object({
     type: z.literal("set_avatar"),
     data: z.string().nullable().describe("The URI of the user's avatar"),
   }),
