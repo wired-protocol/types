@@ -1,6 +1,6 @@
 {
   "name": "@wired-protocol/types",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Typescript types and zod schemas for The Wired.",
   "repository": {
     "type": "git",

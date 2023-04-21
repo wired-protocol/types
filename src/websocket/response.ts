@@ -49,6 +49,7 @@ export const ResponseMessageSchema = z.union([
     data: z.object({
       playerId: PlayerIdSchema,
       name: z.string().optional(),
+      address: z.string().optional(),
       avatar: z.string().optional(),
     }),
   }),
