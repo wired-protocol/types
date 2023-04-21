@@ -19,28 +19,28 @@ export const ResponseMessageSchema = z.union([
   z.object({
     type: z.literal("chat_message"),
     data: z.object({
-      player_id: PlayerIdSchema,
+      playerId: PlayerIdSchema,
       message: z.string(),
     }),
   }),
   z.object({
     type: z.literal("player_avatar"),
     data: z.object({
-      player_id: PlayerIdSchema,
+      playerId: PlayerIdSchema,
       avatar: z.string().nullable(),
     }),
   }),
   z.object({
     type: z.literal("player_grounded"),
     data: z.object({
-      player_id: PlayerIdSchema,
+      playerId: PlayerIdSchema,
       grounded: z.boolean(),
     }),
   }),
   z.object({
     type: z.literal("player_join"),
     data: z.object({
-      player_id: PlayerIdSchema,
+      playerId: PlayerIdSchema,
       name: z.string().optional(),
       avatar: z.string().optional(),
     }),
@@ -52,14 +52,14 @@ export const ResponseMessageSchema = z.union([
   z.object({
     type: z.literal("player_name"),
     data: z.object({
-      player_id: PlayerIdSchema,
+      playerId: PlayerIdSchema,
       name: z.string().nullable(),
     }),
   }),
   z.object({
     type: z.literal("webrtc_create_consumer"),
     data: z.object({
-      player_id: PlayerIdSchema,
+      playerId: PlayerIdSchema,
       consumerId: z.string(),
       producerId: z.string(),
       rtpParameters: WebRTCRtpParametersSchema,
@@ -68,7 +68,7 @@ export const ResponseMessageSchema = z.union([
   z.object({
     type: z.literal("webrtc_create_data_consumer"),
     data: z.object({
-      player_id: PlayerIdSchema,
+      playerId: PlayerIdSchema,
       dataConsumerId: z.string(),
       dataProducerId: z.string(),
       sctpStreamParameters: WebRTCSctpStreamParametersSchema,
