@@ -3,6 +3,7 @@ import { z } from "zod";
 export const WorldInfoSchema = z.object({
   name: z.string().optional(),
   description: z.string().optional(),
+  author: z.string().optional(),
   image: z.string().url().optional(),
   host: z.string().min(1).optional(),
   extras: z.record(z.any()).optional(),
