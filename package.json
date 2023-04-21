@@ -6,6 +6,9 @@
     "type": "git",
     "url": "https://github.com/wired-protocol/types.git"
   },
+  "files": [
+    "dist"
+  ],
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.js",
