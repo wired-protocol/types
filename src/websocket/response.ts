@@ -27,7 +27,7 @@ export const ResponseMessageSchema = z.union([
     type: z.literal("player_avatar"),
     data: z.object({
       player_id: PlayerIdSchema,
-      avatar: z.string(),
+      avatar: z.string().nullable(),
     }),
   }),
   z.object({
@@ -53,7 +53,7 @@ export const ResponseMessageSchema = z.union([
     type: z.literal("player_name"),
     data: z.object({
       player_id: PlayerIdSchema,
-      name: z.string(),
+      name: z.string().nullable(),
     }),
   }),
   z.object({

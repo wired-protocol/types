@@ -21,11 +21,11 @@ export const RequestMessageSchema = z.union([
   }),
   z.object({
     type: z.literal("set_avatar"),
-    data: z.string().describe("The URI of the user's avatar"),
+    data: z.string().nullable().describe("The URI of the user's avatar"),
   }),
   z.object({
     type: z.literal("set_name"),
-    data: z.string().describe("The name of the user"),
+    data: z.string().nullable().describe("The name of the user"),
   }),
   z.object({
     type: z.literal("set_grounded"),
