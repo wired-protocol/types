@@ -59,7 +59,7 @@ export const ResponseMessageSchema = z.union([
   z.object({
     type: z.literal("webrtc_create_consumer"),
     data: z.object({
-      id: PlayerIdSchema,
+      player_id: PlayerIdSchema,
       consumerId: z.string(),
       producerId: z.string(),
       rtpParameters: WebRTCRtpParametersSchema,
@@ -68,7 +68,7 @@ export const ResponseMessageSchema = z.union([
   z.object({
     type: z.literal("webrtc_create_data_consumer"),
     data: z.object({
-      id: PlayerIdSchema,
+      player_id: PlayerIdSchema,
       dataConsumerId: z.string(),
       dataProducerId: z.string(),
       sctpStreamParameters: WebRTCSctpStreamParametersSchema,
