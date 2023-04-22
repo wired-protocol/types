@@ -109,9 +109,9 @@ export const ResponseMessageSchema = z.union([
         sctpParameters: z
           .object({
             port: z.number().int().min(0).max(65535),
-            OS: z.number().int().min(0).max(65535),
-            MIS: z.number().int().min(0).max(65535),
-            maxMessageSize: z.number().int().min(0).max(65535),
+            OS: z.number().int().min(0),
+            MIS: z.number().int().min(0),
+            maxMessageSize: z.number().int().min(0),
           })
           .optional(),
         iceServers: z

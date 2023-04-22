@@ -103,7 +103,7 @@ export const WebRTCSctpParametersSchema = z.object({
 export type WebRTCSctpParameters = z.infer<typeof WebRTCSctpParametersSchema>;
 
 export const WebRTCSctpStreamParametersSchema = z.object({
-  streamId: z.number().int().min(0).max(65535).optional(),
+  streamId: z.number().int().min(0).optional(),
   ordered: z.boolean().optional(),
   maxPacketLifeTime: z.number().int().min(1).optional(),
   maxRetransmits: z.number().int().min(1).optional(),
