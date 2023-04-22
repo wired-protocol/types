@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const ProfileSchema = z.object({
+export const ProfileMetadataSchema = z.object({
   name: z.string().optional(),
   bio: z.string().optional(),
   image: z.string().optional(),
@@ -16,4 +16,4 @@ export const ProfileSchema = z.object({
   extras: z.record(z.string()).optional(),
 });
 
-export type Profile = z.infer<typeof ProfileSchema>;
+export type ProfileMetadata = z.infer<typeof ProfileMetadataSchema>;
