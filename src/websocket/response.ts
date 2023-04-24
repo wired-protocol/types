@@ -103,6 +103,7 @@ export const ResponseMessageSchema = z.union([
         iceParameters: z.object({
           usernameFragment: z.string(),
           password: z.string(),
+          iceLite: z.boolean().optional(),
         }),
         iceCandidates: z.array(WebRTCIceCandidateSchema),
         dtlsParameters: WebRTCDtlsParametersSchema,
