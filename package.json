@@ -15,7 +15,7 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "release": "pnpm run build && pnpm publish"
+    "release": "pnpm build && pnpm publish --access public"
   },
   "devDependencies": {
     "typescript": "^5.0.4"
