@@ -19,6 +19,7 @@ const unsafeObject: any = {
   info: {
     name: "My World",
     description: "A description of the world.",
+    authors: ["alice@unavi.xyz"],
     image: "./image.jpg",
     host: "host.unavi.xyz",
   },
