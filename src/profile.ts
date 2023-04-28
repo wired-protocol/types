@@ -2,6 +2,7 @@ import { z } from "zod";
 
 export const ProfileMetadataSchema = z.object({
   name: z.string().optional(),
+  handle: z.string().optional(),
   bio: z.string().optional(),
   image: z.string().optional(),
   background: z.string().optional(),
