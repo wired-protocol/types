@@ -5,7 +5,7 @@ Typescript types and zod schemas for The Wired.
 ## Installation
 
 ```bash
-npm install @wired-protocol/types
+pnpm install @wired-protocol/types
 ```
 
 ## Usage
