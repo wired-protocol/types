@@ -1,5 +1,9 @@
 import { z } from "zod";
 
+export const TransportTypeSchema = z.enum(["producer", "consumer"]);
+
+export type TransportType = z.infer<typeof TransportTypeSchema>;
+
 export const WebRTCDtlsParametersSchema = z.object({
   role: z.enum(["auto", "client", "server"]).optional(),
   fingerprints: z
