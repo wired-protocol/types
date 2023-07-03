@@ -9,7 +9,7 @@ import {
   WebRTCSctpStreamParametersSchema,
 } from "./webrtc";
 
-export const XyzUnaviWebrtcResponseSchema = z.union([
+export const WebrtcResponseSchema = z.union([
   z.object({
     id: z.literal("xyz.unavi.webrtc.consumer.create"),
     data: z.object({
@@ -81,6 +81,4 @@ export const XyzUnaviWebrtcResponseSchema = z.union([
   }),
 ]);
 
-export type XyzUnaviWebrtcResponse = z.infer<
-  typeof XyzUnaviWebrtcResponseSchema
->;
+export type WebrtcResponse = z.infer<typeof WebrtcResponseSchema>;

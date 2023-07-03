@@ -1,11 +1,11 @@
 import { z } from "zod";
 
-import { XyzUnaviWebrtcRequestSchema } from "./xyz.unavi.webrtc";
-import { XyzUnaviWorldRequestSchema } from "./xyz.unavi.world";
+import { WebrtcRequestSchema } from "./xyz.unavi.webrtc";
+import { WorldRequestSchema } from "./xyz.unavi.world";
 
 export const RequestMessageSchema = z.union([
-  XyzUnaviWebrtcRequestSchema,
-  XyzUnaviWorldRequestSchema,
+  WebrtcRequestSchema,
+  WorldRequestSchema,
 ]);
 
 export type RequestMessage = z.infer<typeof RequestMessageSchema>;

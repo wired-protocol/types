@@ -8,7 +8,7 @@ import {
   WebRTCSctpStreamParametersSchema,
 } from "./webrtc";
 
-export const XyzUnaviWebrtcRequestSchema = z.union([
+export const WebrtcRequestSchema = z.union([
   z.object({
     id: z.literal("xyz.unavi.webrtc.audio.pause"),
     data: z.boolean(),
@@ -42,4 +42,4 @@ export const XyzUnaviWebrtcRequestSchema = z.union([
   }),
 ]);
 
-export type XyzUnaviWebrtcRequest = z.infer<typeof XyzUnaviWebrtcRequestSchema>;
+export type WebrtcRequest = z.infer<typeof WebrtcRequestSchema>;
