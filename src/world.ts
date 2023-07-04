@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const WorldInfoSchema = z.object({
-  name: z.string().optional(),
+  title: z.string().optional(),
   description: z.string().optional(),
   authors: z.array(z.string()).optional(),
   image: z.string().url().optional(),
