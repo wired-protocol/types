@@ -44,14 +44,14 @@ export const WorldPlayerNameSchema = z.object({
 });
 export type WorldPlayerName = z.infer<typeof WorldPlayerNameSchema>;
 
-export const WorldPlayerGroundedSchema = z.object({
-  id: z.literal("xyz.unavi.world.player.grounded"),
+export const WorldPlayerFallingSchema = z.object({
+  id: z.literal("xyz.unavi.world.player.falling"),
   data: z.object({
     playerId: PlayerIdSchema,
-    grounded: z.boolean(),
+    falling: z.boolean(),
   }),
 });
-export type WorldPlayerGrounded = z.infer<typeof WorldPlayerGroundedSchema>;
+export type WorldPlayerFalling = z.infer<typeof WorldPlayerFallingSchema>;
 
 export const WorldPlayerJoinSchema = z.object({
   id: z.literal("xyz.unavi.world.player.join"),
@@ -76,7 +76,7 @@ export const WorldResponseSchema = z.union([
   WorldPlayerAvatarSchema,
   WorldPlayerHandleSchema,
   WorldPlayerNameSchema,
-  WorldPlayerGroundedSchema,
+  WorldPlayerFallingSchema,
   WorldPlayerJoinSchema,
   WorldPlayerLeaveSchema,
 ]);

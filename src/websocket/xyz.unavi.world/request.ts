@@ -36,11 +36,11 @@ export const WorldUserNameSchema = z.object({
 });
 export type WorldUserName = z.infer<typeof WorldUserNameSchema>;
 
-export const WorldUserGroundedSchema = z.object({
-  id: z.literal("xyz.unavi.world.user.grounded"),
+export const WorldUserFallingSchema = z.object({
+  id: z.literal("xyz.unavi.world.user.falling"),
   data: z.boolean(),
 });
-export type WorldUserGrounded = z.infer<typeof WorldUserGroundedSchema>;
+export type WorldUserFalling = z.infer<typeof WorldUserFallingSchema>;
 
 export const WorldRequestSchema = z.union([
   WorldJoinSchema,
@@ -49,6 +49,6 @@ export const WorldRequestSchema = z.union([
   WorldUserAvatarSchema,
   WorldUserHandleSchema,
   WorldUserNameSchema,
-  WorldUserGroundedSchema,
+  WorldUserFallingSchema,
 ]);
 export type WorldRequest = z.infer<typeof WorldRequestSchema>;
