@@ -1,7 +1,7 @@
 import { z } from "zod";
 
-import { WebrtcResponseSchema } from "./xyz.unavi.webrtc";
-import { WorldResponseSchema } from "./xyz.unavi.world";
+import { WebrtcResponseSchema } from "./com.wired-protocol.webrtc";
+import { WorldResponseSchema } from "./com.wired-protocol.world";
 
 export const ResponseMessageSchema = z.union([
   WebrtcResponseSchema,

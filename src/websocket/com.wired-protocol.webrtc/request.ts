@@ -10,34 +10,34 @@ import {
 
 export const WebrtcRequestSchema = z.union([
   z.object({
-    id: z.literal("xyz.unavi.webrtc.audio.pause"),
+    id: z.literal("com.wired-protocol.webrtc.audio.pause"),
     data: z.boolean(),
   }),
   z.object({
-    id: z.literal("xyz.unavi.webrtc.transport.connect"),
+    id: z.literal("com.wired-protocol.webrtc.transport.connect"),
     data: z.object({
       type: TransportTypeSchema,
       dtlsParameters: WebRTCDtlsParametersSchema,
     }),
   }),
   z.object({
-    id: z.literal("xyz.unavi.webrtc.transport.create"),
+    id: z.literal("com.wired-protocol.webrtc.transport.create"),
     data: TransportTypeSchema,
   }),
   z.object({
-    id: z.literal("xyz.unavi.webrtc.router.rtpCapabilities.get"),
+    id: z.literal("com.wired-protocol.webrtc.router.rtpCapabilities.get"),
     data: z.null(),
   }),
   z.object({
-    id: z.literal("xyz.unavi.webrtc.rtpCapabilities.set"),
+    id: z.literal("com.wired-protocol.webrtc.rtpCapabilities.set"),
     data: WebRTCRtpCapabilitiesSchema,
   }),
   z.object({
-    id: z.literal("xyz.unavi.webrtc.produce"),
+    id: z.literal("com.wired-protocol.webrtc.produce"),
     data: WebRTCRtpParametersSchema,
   }),
   z.object({
-    id: z.literal("xyz.unavi.webrtc.produceData"),
+    id: z.literal("com.wired-protocol.webrtc.produceData"),
     data: WebRTCSctpStreamParametersSchema,
   }),
 ]);

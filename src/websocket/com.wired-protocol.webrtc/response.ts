@@ -11,7 +11,7 @@ import {
 
 export const WebrtcResponseSchema = z.union([
   z.object({
-    id: z.literal("xyz.unavi.webrtc.consumer.create"),
+    id: z.literal("com.wired-protocol.webrtc.consumer.create"),
     data: z.object({
       playerId: PlayerIdSchema,
       consumerId: z.string(),
@@ -20,7 +20,7 @@ export const WebrtcResponseSchema = z.union([
     }),
   }),
   z.object({
-    id: z.literal("xyz.unavi.webrtc.dataConsumer.create"),
+    id: z.literal("com.wired-protocol.webrtc.dataConsumer.create"),
     data: z.object({
       playerId: PlayerIdSchema,
       dataConsumerId: z.string(),
@@ -29,19 +29,19 @@ export const WebrtcResponseSchema = z.union([
     }),
   }),
   z.object({
-    id: z.literal("xyz.unavi.webrtc.producer.id"),
+    id: z.literal("com.wired-protocol.webrtc.producer.id"),
     data: z.string(),
   }),
   z.object({
-    id: z.literal("xyz.unavi.webrtc.dataProducer.id"),
+    id: z.literal("com.wired-protocol.webrtc.dataProducer.id"),
     data: z.string(),
   }),
   z.object({
-    id: z.literal("xyz.unavi.webrtc.router.rtpCapabilities"),
+    id: z.literal("com.wired-protocol.webrtc.router.rtpCapabilities"),
     data: WebRTCRtpCapabilitiesSchema,
   }),
   z.object({
-    id: z.literal("xyz.unavi.webrtc.transport.created"),
+    id: z.literal("com.wired-protocol.webrtc.transport.created"),
     data: z.object({
       type: z.union([z.literal("producer"), z.literal("consumer")]),
       options: z.object({
