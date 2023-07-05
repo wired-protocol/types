@@ -30,7 +30,7 @@
     "prettier-plugin-packagejson": "^2.4.3",
     "typescript": "^5.0.4"
   },
-  "dependencies": {
+  "peerDependencies": {
     "zod": "^3.21.4"
   }
 }
